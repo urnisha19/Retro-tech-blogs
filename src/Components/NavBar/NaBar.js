@@ -2,7 +2,8 @@ import React from 'react';
 import { useContext } from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link, useHistory } from 'react-router-dom';
-import UserContext from '../../App';
+import { UserContext } from '../../App';
+
 import './NavBar.css';
 
 const NabBar = () => {

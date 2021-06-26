@@ -1,0 +1,17 @@
+.sidebar{
+    font-family: 'Benne', serif;
+    font-size:20px;
+}
+.sidebar-title{
+    background-color: #CB594D;
+    color:white;
+    text-align:center;
+    padding:2%;
+}
+.admin-manage{
+    color:black;
+}
+.admin-manage:hover{
+    color: #CB594D;
+   font-weight:bold;
+}

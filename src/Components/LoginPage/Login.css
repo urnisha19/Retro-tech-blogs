@@ -1,0 +1,30 @@
+.login{
+    font-family: 'Benne', serif;
+    font-size:20px;
+    text-align: center;
+    margin-top: 10%;
+}
+.login-form{
+    border: 3px solid #CB594D;
+    margin: auto;
+    width: 50%;
+    padding: 3%;
+}
+.login input{
+    margin-bottom: 5px;
+    padding: 5px;
+    border: 2px solid #CB594D;
+    border-radius: 6px; 
+}
+.button-login{
+    background-color: #CB594D;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color:white;
+}
+.button-login:hover{
+    font-weight: bold;
+}
+.confirm-pass{
+    margin-bottom: 10px;
+}

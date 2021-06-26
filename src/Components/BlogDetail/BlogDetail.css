@@ -1,0 +1,12 @@
+.blog-detail-body{
+  font-family: 'Benne', serif;
+  font-size: 28px;
+  background-color:#4C4646;
+  color:white;
+}
+.blogTitle{
+  background-color:#CB594D;
+}
+.related-blog-title:hover{
+  color:white;
+}

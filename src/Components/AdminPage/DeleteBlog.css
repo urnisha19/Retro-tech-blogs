@@ -1,0 +1,12 @@
+
+.admin-table{
+    width: 95%!important;
+    margin: 0 auto;
+}
+
+.delete-button:hover{
+    background-color: #CB594D;
+    color:white;
+    border:#CB594D;
+    padding:3%;
+}

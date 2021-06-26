@@ -15,25 +15,27 @@ const NabBar = () => {
     }
     
     return (
-        <Container>
-            <Navbar bg="***" expand="lg" className="py-4">
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar bg="dark" expand="lg" className="py-4 header-text">
+                <Navbar.Toggle aria-controls="basic-navbar-nav" style={{ backgroundColor:"white"}} />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ml-auto">
-                        <Link to="/home" className="navBar-link">Blogs</Link>
-                        <Link to="/admin/orderList" className="navBar-link">Admin</Link>
-                        {
+                    <Link to="/blogs" className="navBar-link">Blogs</Link>
+                        <Link to="/admin/addBlog" className="navBar-link">Admin</Link>
+                    <Link to="#" className="navBar-link">Shop</Link>
+                    <Link to="#" className="navBar-link">New</Link>
+                        <Link to="#" className="navBar-link">About US</Link>
+                        {/* {
                             loggedInUser.email ?
                                 <Button className="navBar-button" onClick={handleLogOut}>Logout</Button>
                                 :
                                 <Link to="/login">
                                     <Button className="navBar-button">Login</Button>
                                 </Link>
-                        }
+                        } */}
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
-        </Container >
+        
     );
 };
 

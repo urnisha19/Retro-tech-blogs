@@ -1,0 +1,11 @@
+.footer-links a{
+    color:slategray;
+    padding: 2px 6px;
+    font-size: 28px;
+    transition: all .5s ease-in-out;    
+    animation: animation 4s ease ;
+}
+.footer-links a:hover{
+    color:#CB594D;
+    transform: rotate(360deg);
+}

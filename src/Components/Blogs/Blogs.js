@@ -21,7 +21,8 @@ const Blogs = (props) => {
     return (
         <section className="blogs-container my-5 py-5">
             <div className="text-center">
-                <h2>Our Blogs</h2>
+                <h1 className="section-title header-text">Our Blogs</h1>
+                <small>We provide new tech items with a retro vibe</small>
             </div>
             <div className="d-flex justify-content-center my-5">
                 <div className="row w-75">{

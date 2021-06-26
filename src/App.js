@@ -12,11 +12,12 @@ import BlogsDetail from './Components/BlogDetail/BlogDetail';
 import { createContext, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
+import PrivateRoute from './Components/LoginPage/PrivateRoute';
 export const UserContext = createContext();
 
 function App() {
   let [loggedInUser, setLoggedInUser] = useState({
-    isSignedIn: false,
+    isSignedIn : false,
     email: '',
     password: ''
   });
@@ -25,19 +26,22 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Switch>
-          <Route exact path="/home">
+          <Route exact path="/blogs">
             <Home />
           </Route>
           <Route exact path="/">
             <Home></Home>
           </Route>
           {/* admin  routes */}
-          <Route path="/admin/addBlog">
-            <AddBlog />
-          </Route>
-          <Route path="/admin/deleteBlog">
+          <PrivateRoute path="/admin/addBlog">
+          <AddBlog />
+          </PrivateRoute>
+          <PrivateRoute path="/admin/deleteBlog">
+          <DeleteBlog />
+          </PrivateRoute>
+          {/* <Route path="/admin/deleteBlog">
             <DeleteBlog />
-          </Route>
+          </Route> */}
 
           <Route path="/blogDetail">
             <BlogsDetail/>

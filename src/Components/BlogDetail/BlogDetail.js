@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { addBlog } from '../../Components/Redux/Action/blogAction';
 import { connect } from 'react-redux';
 import './BlogDetail.css';
+import Footer from '../HomePage/Footer';
 
 const BlogsDetail = (props) => {
     const { addBlog, blog } = props;
@@ -11,7 +12,7 @@ const BlogsDetail = (props) => {
 
     const [blogs, setBlogs] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/blogs')
+        fetch('https://frozen-tor-46195.herokuapp.com/blogs')
             .then(response => response.json())
             .then(data => {
                 if (data) {
@@ -29,7 +30,7 @@ const BlogsDetail = (props) => {
                         <div className="col-md-3 col-3">
                             <h2 className="mt-5 text-center">Related Blogs</h2>
                             <div className="sidebar d-flex flex-column">
-                               { blogs.map(blog => <Link to='/blogs' style={{textDecoration:"none"}}> <h3 className="py-1 related-blog-title" key={blog._id}>{blog.title}</h3></Link>)}
+                                {blogs.map(blog => <Link to='/blogs' style={{ textDecoration: "none" }}> <h3 className="py-1 related-blog-title" key={blog._id}>{blog.title}</h3></Link>)}
                             </div>
                         </div>
                         <div className="col-md-9 col-9 container p-4">
@@ -47,6 +48,7 @@ const BlogsDetail = (props) => {
                     </div>
                 </div>
             </section>
+            <Footer />
         </div>
     );
 };

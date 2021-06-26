@@ -7,6 +7,9 @@
 .blogTitle{
   background-color:#CB594D;
 }
+.related-blog-title{
+  color: #CB594D;
+}
 .related-blog-title:hover{
   color:white;
 }

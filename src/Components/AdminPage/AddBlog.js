@@ -19,7 +19,7 @@ const AddBlog = () => {
         formData.append('file', file)
         formData.append('title', info.title)
         formData.append('content', info.content)
-        fetch('http://localhost:5000/admin/addBlog', {
+        fetch('https://frozen-tor-46195.herokuapp.com/admin/addBlog', {
             method: 'POST',
             body: formData
         })
@@ -67,7 +67,7 @@ const AddBlog = () => {
                                     <input onChange={e => setFile(e.target.files[0])} type="file" name="file" required />
                                 </div>
                                 <div className="form-group d-flex justify-content-start p-3">
-                                    <button type="submit" className="btn btn-success" style={{ backgroundColor:"#CB594D", borderColor:"#CB594D"}}>Add Blog</button>
+                                    <button type="submit" className="btn btn-success" style={{ backgroundColor: "#CB594D", borderColor: "#CB594D" }}>Add Blog</button>
                                 </div>
                             </form>
                         </div>

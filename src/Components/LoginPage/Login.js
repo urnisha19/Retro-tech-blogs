@@ -6,9 +6,7 @@ import firebaseConfig from './firebase.config';
 import { useHistory, useLocation } from 'react-router';
 import { useForm } from "react-hook-form";
 import './Login.css';
-import { Container } from 'react-bootstrap';
 import NavBar from '../NavBar/NaBar';
-import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 const Login = () => {
@@ -31,9 +29,9 @@ const Login = () => {
 
     const handleBlur = (e) => {
         let isFieldValid = true;
-        // if (e.target.name === 'email') {
-        //     isFieldValid = /\S+@\S+\.\S+/.test(e.target.value);
-        // }
+        if (e.target.name === 'email') {
+            isFieldValid = /\S+@\S+\.\S+/.test(e.target.value);
+        }
         if (e.target.name === 'password') {
             const isPasswordValid = e.target.value;
             isFieldValid = isPasswordValid;
@@ -64,6 +62,7 @@ const Login = () => {
                 });
         }
 
+        // returning user
         if (!newUser && loggedInUser.email && loggedInUser.password) {
             firebase.auth().signInWithEmailAndPassword(loggedInUser.email, loggedInUser.password)
                 .then((res) => {
@@ -104,7 +103,7 @@ const Login = () => {
                     <br />
                     <input className='button-login' type="submit" value='Log in' />
                 </form>
-                 <p style={{ color: 'red' }}>{loggedInUser.error}</p>
+                <p style={{ color: 'red' }}>{loggedInUser.error}</p>
             </div>
         </div>
     );

@@ -9,7 +9,7 @@ const DeleteBlog = () => {
     const [blogList, setBlogList] = useState([]);
     const history = useHistory();
     useEffect(() => {
-        fetch('http://localhost:5000/blogs')
+        fetch('https://frozen-tor-46195.herokuapp.com/blogs')
             .then(res => res.json())
             .then(data => {
                 setBlogList(data);
@@ -17,7 +17,7 @@ const DeleteBlog = () => {
     }, [])
 
     const deleteBlog = (id) => {
-        fetch(`http://localhost:5000/admin/deleteBlog/${id}`, {
+        fetch(`https://frozen-tor-46195.herokuapp.com/admin/deleteBlog/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())
@@ -31,24 +31,24 @@ const DeleteBlog = () => {
     }
     return (
         <div>
-        <NavBar></NavBar>
-        <section className="add-blog">
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-3 col-sm-12 col-12 py-3"></div>
-                    <div className="col-md-9 col-sm-12 col-12 d-flex justify-content-between py-3">
-                        <h1 className="header-text text-center">Delete Blog</h1>
+            <NavBar></NavBar>
+            <section className="add-blog">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-3 col-sm-12 col-12 py-3"></div>
+                        <div className="col-md-9 col-sm-12 col-12 d-flex justify-content-between py-3">
+                            <h1 className="header-text text-center">Delete Blog</h1>
+                        </div>
                     </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-3 col-3">
-                        <AdminSideBar />
-                    </div>
-                    <div className="col-md-9 col-9 container p-4">
-                    <table className="table">
+                    <div className="row">
+                        <div className="col-md-3 col-3">
+                            <AdminSideBar />
+                        </div>
+                        <div className="col-md-9 col-9 container p-4">
+                            <table className="table">
                                 <thead>
                                     <tr>
-                                        <th style={{color: '#CB594D', fontSize:"24px"}}>Blogs Title</th>
+                                        <th style={{ color: '#CB594D', fontSize: "24px" }}>Blogs Title</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -66,11 +66,11 @@ const DeleteBlog = () => {
                                     }
                                 </tbody>
                             </table>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </div>
+            </section>
+        </div>
     )
 };
 

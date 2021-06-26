@@ -6,14 +6,14 @@ import './Home.css';
 import Footer from './Footer';
 
 const Home = () => {
-    return (
-        <div>
-          <img src={CoverImg} class="img-fluid" alt="..." ></img>
-          <NavBar/>
-          <Blogs/>
-          <Footer/>
-        </div>
-    );
+  return (
+    <div>
+      <img src={CoverImg} class="img-fluid" alt="..." ></img>
+      <NavBar />
+      <Blogs />
+      <Footer />
+    </div>
+  );
 };
 
 export default Home;

@@ -6,10 +6,10 @@ import SingleBlog from './SingleBlog';
 import './Blogs.css';
 
 const Blogs = (props) => {
-    const { addBlog, blog} = props;
+    const { addBlog, blog } = props;
     const [blogs, setBlogs] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/blogs')
+        fetch('https://frozen-tor-46195.herokuapp.com/blogs')
             .then(response => response.json())
             .then(data => {
                 if (data) {

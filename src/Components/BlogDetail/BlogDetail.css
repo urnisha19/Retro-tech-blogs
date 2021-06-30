@@ -1,6 +1,6 @@
 .blog-detail-body{
   font-family: 'Benne', serif;
-  font-size: 28px;
+  font-size: 20px;
   background-color:#4C4646;
   color:white;
 }
@@ -9,6 +9,7 @@
 }
 .related-blog-title{
   color: #CB594D;
+  font-size: 20px;
 }
 .related-blog-title:hover{
   color:white;
